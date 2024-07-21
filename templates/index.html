@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Amazon Scraper</title>
+    <style>
+        body {
+        background-image: url('https://www.apa.org/images/2021-03-career-online-reviews_tcm7-284963.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;"><u style="background-color:yellow;"> Amazon Reviews Scraper </u></h1>
+        <form action="/result" method="post">
+            <label for="query">Enter product name:</label>
+            <input type="text" id="query" name="query" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

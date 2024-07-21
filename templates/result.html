@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        body {
+        background-image: url('https://wallpaperaccess.com/full/2856042.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Amazon Scraper Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Results for "{{ query }}"</h1>
+        
+        <h2>{{ product_info.title }}</h2>
+        <p>Price: ₹{{ product_info.price }}</p>
+        <p><a href="{{ product_info.link }}" target="_blank">Product Link</a></p>
+        
+        <div class="table-responsive">
+            {{ table | safe }}
+        </div>
+        <a href="/">Back to Search</a>
+    </div>
+</body>
+</html>
